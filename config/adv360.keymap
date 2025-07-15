@@ -22,49 +22,75 @@
         };
     };
 
-    macros {
-        alttab: alttab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp TAB>;
-            label = "ALTTAB";
-        };
-
-        powertoys: powertoys {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp SPACE>;
-            label = "POWERTOYS";
-        };
-
-        email: email {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp R &kp I &kp C &kp K &kp Y &kp Z &kp H &kp A &kp N &kp G &kp N1 &kp N9 &kp N6 &kp AT &kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp DOT &kp C &kp O &kp M>;
-            label = "EMAIL";
-        };
-
-        something: password {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(H) &kp Y &kp P &kp E &kp R &kp I &kp O &kp S &kp N1 &kp N9 &kp N6>;
-            label = "PASSWORD";
-        };
-
-        copyall: copyall {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp G &kp G &kp LS(V) &kp LS(G) &kp Y>;
-            label = "COPYALL";
-        };
-
-        printscreen: printscreen {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-            label = "PRINTSCREEN";
-        };
+macros {
+    alttab: alttab {
+         compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <
+            &macro_press  &kp LEFT_ALT
+          , &macro_tap    &kp TAB
+          , &macro_release &kp LEFT_ALT
+        >;
+        label = "ALTTAB";
     };
+
+    powertoys: powertoys {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <
+            &macro_press   &kp LEFT_ALT
+          , &macro_tap     &kp SPACE
+          , &macro_release &kp LEFT_ALT
+        >;
+        label = "POWERTOYS";
+    };
+
+    email: email {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <
+            &macro_tap &kp R &kp I &kp C &kp K &kp Y &kp Z &kp H &kp A &kp N
+                       &kp G &kp N1 &kp N9 &kp N6 &kp AT &kp O &kp U &kp T
+                       &kp L &kp O &kp O &kp K &kp DOT &kp C &kp O &kp M
+        >;
+        label = "EMAIL";
+    };
+
+something : something {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <
+        &macro_press    &kp LEFT_SHIFT
+      , &macro_tap      &kp H
+      , &macro_release  &kp LEFT_SHIFT
+      , &macro_tap      &kp Y &kp P &kp E &kp R &kp I &kp O &kp N
+                        &kp S &kp N1 &kp N9 &kp N6
+    >;
+    label = "PASSWORD";
+};
+
+    copyall: copyall {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <
+            &macro_tap      &kp G &kp G
+          , &macro_press    &kp LEFT_SHIFT
+          , &macro_tap      &kp V &kp G
+          , &macro_release  &kp LEFT_SHIFT
+          , &macro_tap      &kp Y
+        >;
+        label = "COPYALL";
+    };
+
+    printscreen: printscreen {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <
+            &macro_tap &kp PRINTSCREEN
+        >;
+        label = "PRINTSCREEN";
+    };
+};
 
     keymap {
         compatible = "zmk,keymap";
