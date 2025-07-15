@@ -22,75 +22,87 @@
         };
     };
 
-macros {
-    alttab: alttab {
-         compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press  &kp LEFT_ALT
-          , &macro_tap    &kp TAB
-          , &macro_release &kp LEFT_ALT
-        >;
-        label = "ALTTAB";
-    };
+    macros {
+        alttab: alttab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
 
-    powertoys: powertoys {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LEFT_ALT
-          , &macro_tap     &kp SPACE
-          , &macro_release &kp LEFT_ALT
-        >;
-        label = "POWERTOYS";
-    };
+            label = "ALTTAB";
+        };
 
-    email: email {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_tap &kp R &kp I &kp C &kp K &kp Y &kp Z &kp H &kp A &kp N
-                       &kp G &kp N1 &kp N9 &kp N6 &kp AT &kp O &kp U &kp T
-                       &kp L &kp O &kp O &kp K &kp DOT &kp C &kp O &kp M
-        >;
-        label = "EMAIL";
-    };
+        powertoys: powertoys {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
 
-something : something {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = <
-        &macro_press    &kp LEFT_SHIFT
-      , &macro_tap      &kp H
-      , &macro_release  &kp LEFT_SHIFT
-      , &macro_tap      &kp Y &kp P &kp E &kp R &kp I &kp O &kp N
-                        &kp S &kp N1 &kp N9 &kp N6
-    >;
-    label = "PASSWORD";
-};
+            label = "POWERTOYS";
+        };
 
-    copyall: copyall {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_tap      &kp G &kp G
-          , &macro_press    &kp LEFT_SHIFT
-          , &macro_tap      &kp V &kp G
-          , &macro_release  &kp LEFT_SHIFT
-          , &macro_tap      &kp Y
-        >;
-        label = "COPYALL";
-    };
+        email: email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp R &kp I &kp C &kp K &kp Y &kp Z &kp H &kp A &kp N &kp G &kp N1 &kp N9 &kp N6 &kp AT &kp O &kp U &kp T &kp L &kp O &kp O &kp K &kp DOT &kp C &kp O &kp M>;
 
-    printscreen: printscreen {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_tap &kp PRINTSCREEN
-        >;
-        label = "PRINTSCREEN";
+            label = "EMAIL";
+        };
+
+        something: something {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp H>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp Y &kp P &kp E &kp R &kp I &kp O &kp N &kp S &kp N1 &kp N9 &kp N6>;
+
+            label = "PASSWORD";
+        };
+
+        copyall: copyall {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp G &kp G>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp V &kp G>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp Y>;
+
+            label = "COPYALL";
+        };
+
+        printscreen: printscreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp PRINTSCREEN>;
+
+            label = "PRINTSCREEN";
+        };
     };
-};
 
     keymap {
         compatible = "zmk,keymap";
@@ -98,11 +110,11 @@ something : something {
         default_layer {
             display-name = "Base";
             bindings = <
-&key_repeat  &kp N1     &kp N2            &kp N3    &kp N4     &kp N5  &tog 0                                                                                &mo 1        &kp N6  &kp N7  &kp N8     &kp N9             &kp N0         &kp ESCAPE
-&kp TAB      &kp Q      &kp W             &kp F     &kp P      &kp B   &alttab                                                                               &none        &kp J   &kp L   &kp U      &kp Y              &kp SEMICOLON  &kp MINUS
-&kp EQUAL    &kp A      &kp R             &kp S     &kp T      &kp G   &powertoys       &mt LALT ESCAPE   &kp LS(LCTRL)      &kp LGUI     &mt RIGHT_ALT ESC  &none        &kp M   &kp N   &kp E      &kp I              &kp O          &kp SQT
-&kp LSHFT    &kp Z      &kp X             &kp C     &kp D      &kp V                                      &printscreen       &key_repeat                                  &kp K   &kp H   &kp COMMA  &kp DOT            &kp FSLH       &kp RSHFT
-&tog 1       &kp GRAVE  &kp LEFT_BRACKET  &kp LEFT  &kp RIGHT          &lt 1 BACKSPACE  &mt LCTRL DELETE  &kp END            &copyall     &mt RCTRL ENTER    &lt 1 SPACE          &kp UP  &kp DOWN   &kp RIGHT_BRACKET  &kp BSLH       &tog 2
+&rgb_ug RGB_HUD  &kp N1     &kp N2            &kp N3    &kp N4     &kp N5  &tog 0                                                                                &mo 1        &kp N6  &kp N7  &kp N8     &kp N9             &kp N0         &rgb_ug RGB_BRI
+&kp TAB          &kp Q      &kp W             &kp F     &kp P      &kp B   &alttab                                                                               &none        &kp J   &kp L   &kp U      &kp Y              &kp SEMICOLON  &kp MINUS
+&kp EQUAL        &kp A      &kp R             &kp S     &kp T      &kp G   &powertoys       &mt LALT ESCAPE   &kp LS(LCTRL)      &kp LGUI     &mt RIGHT_ALT ESC  &none        &kp M   &kp N   &kp E      &kp I              &kp O          &kp SQT
+&kp LSHFT        &kp Z      &kp X             &kp C     &kp D      &kp V                                      &printscreen       &key_repeat                                  &kp K   &kp H   &kp COMMA  &kp DOT            &kp FSLH       &kp RSHFT
+&tog 1           &kp GRAVE  &kp LEFT_BRACKET  &kp LEFT  &kp RIGHT          &lt 1 BACKSPACE  &mt LCTRL DELETE  &kp END            &copyall     &mt RCTRL ENTER    &lt 1 SPACE          &kp UP  &kp DOWN   &kp RIGHT_BRACKET  &kp BSLH       &tog 2
             >;
         };
 
@@ -113,7 +125,7 @@ something : something {
 &bt BT_SEL 1  &kp GRAVE        &none         &none         &none         &none        &bootloader                                                 &bootloader      &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp RIGHT_BRACE        &kp NON_US_BACKSLASH  &kp F12
 &kp CAPSLOCK  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT  &none        &none  &none           &bt BT_CLR  &none       &kp ESC          &kp CARET       &kp AMPERSAND     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK          &none
 &none         &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                           &email          &none                                    &kp NUMBER_6    &kp N7            &kp N8                &kp N9                 &kp N0                &none
-&none         &none            &none         &kp LEFT      &kp RIGHT                  &none        &none  &something      &none       &bl BL_TOG  &rgb_ug RGB_TOG                  &kp UP_ARROW      &kp DOWN              &none                  &none                 &none
+&tog 0        &none            &none         &kp LEFT      &kp RIGHT                  &none        &none  &something      &none       &bl BL_TOG  &rgb_ug RGB_TOG                  &kp UP_ARROW      &kp DOWN              &none                  &none                 &tog 0
             >;
         };
 
@@ -123,7 +135,7 @@ something : something {
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB5  &trans  &trans  &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                    &trans  &trans          &mmv MOVE_DOWN  &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &mkp MB4  &trans          &trans          &trans          &trans           &trans  &trans
+&tog 0  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &mkp MB4  &trans          &trans          &trans          &trans           &trans  &tog 0
             >;
         };
     };
