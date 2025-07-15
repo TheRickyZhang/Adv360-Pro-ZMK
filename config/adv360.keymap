@@ -7,24 +7,15 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &mt {
-    flavor = "tap-unless-interrupted";
+    flavor = "hold-preferred";
     hold-trigger-on-release;
+    tapping-term-ms = <1>;
 };
 
 / {
     behaviors {
         #include "macros.dtsi"
       #include "version.dtsi"
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            flavor = "tap-unless-interrupted";
-        };
     };
 
     macros {
@@ -106,6 +97,15 @@
             bindings = <&macro_tap>, <&kp PRINTSCREEN>;
 
             label = "PRINTSCREEN";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        huh {
+            bindings = <&kp A>;
+            key-positions = <70 71 53>;
         };
     };
 
