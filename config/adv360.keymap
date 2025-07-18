@@ -11,14 +11,23 @@
         #include "macros.dtsi"
       #include "version.dtsi"
 
-        new_behavior: new_behavior {
+        default: default {
             compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&none>, <&none>;
+            label = "DEFAULT";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-unless-interrupted";
+        };
+
+        modtap: modtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MODTAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            bindings = <&lt>, <&kp>;
         };
     };
 
@@ -119,11 +128,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&rgb_ug RGB_HUD  &kp N1     &kp N2            &kp N3    &kp N4     &kp N5  &tog 0                                                                                &mo 1        &kp N6  &kp N7  &kp N8     &kp N9             &kp N0         &rgb_ug RGB_BRI
-&kp TAB          &kp Q      &kp W             &kp F     &kp P      &kp B   &alttab                                                                               &none        &kp J   &kp L   &kp U      &kp Y              &kp SEMICOLON  &kp MINUS
-&kp EQUAL        &kp A      &kp R             &kp S     &kp T      &kp G   &powertoys       &mt LALT ESCAPE   &kp LS(LCTRL)      &kp LGUI     &mt RIGHT_ALT ESC  &none        &kp M   &kp N   &kp E      &kp I              &kp O          &kp SQT
-&kp LSHFT        &kp Z      &kp X             &kp C     &kp D      &kp V                                      &printscreen       &key_repeat                                  &kp K   &kp H   &kp COMMA  &kp DOT            &kp FSLH       &kp RSHFT
-&tog 1           &kp GRAVE  &kp LEFT_BRACKET  &kp LEFT  &kp RIGHT          &lt 1 BACKSPACE  &mt LCTRL DELETE  &kp END            &copyall     &mt RCTRL ENTER    &lt 1 SPACE          &kp UP  &kp DOWN   &kp RIGHT_BRACKET  &kp BSLH       &tog 2
+&rgb_ug RGB_HUD  &kp N1     &kp N2            &kp N3    &kp N4     &kp N5  &tog 0                                                                                         &mo 1        &kp N6  &kp N7  &kp N8     &kp N9             &kp N0         &rgb_ug RGB_BRI
+&kp TAB          &kp Q      &kp W             &kp F     &kp P      &kp B   &alttab                                                                                        &none        &kp J   &kp L   &kp U      &kp Y              &kp SEMICOLON  &kp MINUS
+&kp EQUAL        &kp A      &kp R             &kp S     &kp T      &kp G   &powertoys           &mt LALT ESCAPE        &kp LS(LCTRL)      &kp LGUI     &mt RIGHT_ALT ESC  &none        &kp M   &kp N   &kp E      &kp I              &kp O          &kp SQT
+&kp LSHFT        &kp Z      &kp X             &kp C     &kp D      &kp V                                               &printscreen       &key_repeat                                  &kp K   &kp H   &kp COMMA  &kp DOT            &kp FSLH       &kp RSHFT
+&tog 1           &kp GRAVE  &kp LEFT_BRACKET  &kp LEFT  &kp RIGHT          &modtap 1 BACKSPACE  &default LCTRL DELETE  &kp END            &copyall     &mt RCTRL ENTER    &lt 1 SPACE          &kp UP  &kp DOWN   &kp RIGHT_BRACKET  &kp BSLH       &tog 2
             >;
         };
 
