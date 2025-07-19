@@ -142,11 +142,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&rgb_ug RGB_BRD  &kp N1    &kp N2   &kp N3    &kp N4     &kp N5  &tog 0                                                                                     &mo 1                      &kp N6  &kp N7  &kp N8     &kp N9       &kp N0         &rgb_ug RGB_BRI
-&kp TAB          &kp Q     &kp W    &kp F     &kp P      &kp B   &alttab                                                                                    &none                      &kp J   &kp L   &kp U      &kp Y        &kp SEMICOLON  &kp MINUS
-&kp EQUAL        &kp A     &kp R    &kp S     &kp T      &kp G   &powertoys             &mt LEFT_ALT ESCAPE  &to 0           &kp LGUI      &kp ESCAPE       &none                      &kp M   &kp N   &kp E      &kp I        &kp O          &kp SQT
-&kp LSHFT        &kp Z     &kp X    &kp C     &kp D      &kp V                                               &mo 2           &printscreen                                              &kp K   &kp H   &kp COMMA  &kp DOT      &kp FSLH       &kp RSHFT
-&to 1            &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &layertap 1 BACKSPACE  &mt LCTRL DELETE     &caps_word      &copyall      &mt RCTRL ENTER  &layertapbalanced 1 SPACE          &kp UP  &kp DOWN   &key_repeat  &kp BSLH       &to 2
+&rgb_ug RGB_BRD  &kp N1     &kp N2      &kp N3    &kp N4     &kp N5  &tog 0                                                                                   &mo 1                      &kp N6  &kp N7  &kp N8     &kp N9       &kp N0         &rgb_ug RGB_BRI
+&kp TAB          &kp Q      &kp W       &kp F     &kp P      &kp B   &alttab                                                                                  &none                      &kp J   &kp L   &kp U      &kp Y        &kp SEMICOLON  &kp MINUS
+&kp EQUAL        &kp A      &kp R       &kp S     &kp T      &kp G   &powertoys             &mt LEFT_ALT ESCAPE  &mo 2         &kp LGUI      &kp ESCAPE       &none                      &kp M   &kp N   &kp E      &kp I        &kp O          &kp SQT
+&kp LSHFT        &kp Z      &kp X       &kp C     &kp D      &kp V                                               &kp HOME      &printscreen                                              &kp K   &kp H   &kp COMMA  &kp DOT      &kp FSLH       &kp RSHFT
+&to 1            &kp GRAVE  &caps_word  &kp LEFT  &kp RIGHT          &layertap 1 BACKSPACE  &mt LCTRL DELETE     &kp END       &copyall      &mt RCTRL ENTER  &layertapbalanced 1 SPACE          &kp UP  &kp DOWN   &key_repeat  &kp GRAVE      &to 2
             >;
         };
 
@@ -155,7 +155,7 @@
             bindings = <
 &bt BT_SEL 0  &kp F1        &kp F2           &kp F3            &kp F4          &kp F5       &none                                                                &trans       &kp F6     &kp F7           &kp F8                &kp F9                 &kp F10        &kp F11
 &bt BT_SEL 1  &kp NUMBER_1  &kp AT_SIGN      &kp HASH          &kp DOLLAR      &kp PERCENT  &bootloader                                                          &bootloader  &kp J      &kp AMPERSAND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp NUMBER_0   &kp F12
-&kp EQUAL     &kp TILDE     &kp EXCLAMATION  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp N        &none          &kp LEFT_ALT  &none           &bt BT_CLR  &kp ESCAPE  &none        &kp CARET  &kp RIGHT_BRACE  &kp RIGHT_BRACKET     &kp I                  &kp ASTERISK   &kp GRAVE
+&kp EQUAL     &kp TILDE     &kp EXCLAMATION  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp N        &none          &kp LEFT_ALT  &none           &bt BT_CLR  &kp ESCAPE  &none        &kp CARET  &kp RIGHT_BRACE  &kp RIGHT_BRACKET     &kp I                  &kp ASTERISK   &kp DOUBLE_QUOTES
 &none         &none         &none            &kp F2            &kp F5          &none                                     &email          &none                                &kp K      &kp F9           &kp F7                &kp F8                 &kp BACKSLASH  &none
 &to 0         &bl BL_TOG    &rgb_ug RGB_TOG  &kp LEFT          &kp RIGHT                    &kp BACKSPACE  &kp LCTRL     &something      &none       &kp ENTER   &kp SPACE               &kp UP_ARROW     &kp DOWN              &none                  &none          &to 0
             >;
