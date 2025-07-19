@@ -11,17 +11,14 @@
         #include "macros.dtsi"
       #include "version.dtsi"
 
-        default: default {
+        modkeyrepeat: modkeyrepeat {
             compatible = "zmk,behavior-hold-tap";
-            label = "DEFAULT";
-            bindings = <&kp>, <&kp>;
+            label = "MODKEYREPEAT";
+            bindings = <&kp>, <&key_repeat>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-key-positions = <7 21 8 39 22 40 9 41 54 23 24 23 24 41 42 55 56 57 57 58 44 43 25 26>;
             hold-trigger-on-release;
         };
 
@@ -135,22 +132,22 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp AT     &kp N1     &kp N2            &kp N3    &kp N4     &kp N5  &tog 0                                                                                      &mo 1              &kp N6  &kp N7  &kp N8     &kp N9             &kp N0         &rgb_ug RGB_BRI
-&kp TAB    &kp Q      &kp W             &kp F     &kp P      &kp B   &alttab                                                                                     &none              &kp J   &kp L   &kp U      &kp Y              &kp SEMICOLON  &kp MINUS
-&kp EQUAL  &kp A      &kp R             &kp S     &kp T      &kp G   &powertoys             &mt LALT ESCAPE   &kp LS(LCTRL)      &kp LGUI     &mt RIGHT_ALT ESC  &none              &kp M   &kp N   &kp E      &kp I              &kp O          &kp SQT
-&kp LSHFT  &kp Z      &kp X             &kp C     &kp D      &kp V                                            &printscreen       &key_repeat                                        &kp K   &kp H   &kp COMMA  &kp DOT            &kp FSLH       &kp RSHFT
-&tog 1     &kp GRAVE  &kp LEFT_BRACKET  &kp LEFT  &kp RIGHT          &layertap 1 BACKSPACE  &mt LCTRL DELETE  &kp END            &copyall     &mt RCTRL ENTER    &layertap 1 SPACE          &kp UP  &kp DOWN   &kp RIGHT_BRACKET  &kp BSLH       &tog 2
+&rgb_ug RGB_BRD  &kp N1     &kp N2       &kp N3    &kp N4     &kp N5  &tog 0                                                                                       &mo 1              &kp N6  &kp N7  &kp N8     &kp N9       &kp N0         &rgb_ug RGB_BRI
+&kp TAB          &kp Q      &kp W        &kp F     &kp P      &kp B   &alttab                                                                                      &none              &kp J   &kp L   &kp U      &kp Y        &kp SEMICOLON  &kp MINUS
+&kp EQUAL        &kp A      &kp R        &kp S     &kp T      &kp G   &powertoys             &mt LALT DELETE   &kp LS(LCTRL)      &kp LGUI      &mt RS(RCTRL) ESC  &none              &kp M   &kp N   &kp E      &kp I        &kp O          &kp SQT
+&kp LSHFT        &kp Z      &kp X        &kp C     &kp D      &kp V                                            &kp HOME           &printscreen                                        &kp K   &kp H   &kp COMMA  &kp DOT      &kp FSLH       &kp RSHFT
+&tog 1           &kp GRAVE  &key_repeat  &kp LEFT  &kp RIGHT          &layertap 1 BACKSPACE  &mt LCTRL ESCAPE  &kp END            &copyall      &mt RCTRL ENTER    &layertap 1 SPACE          &kp UP  &kp DOWN   &key_repeat  &kp BSLH       &tog 2
             >;
         };
 
         mod {
             display-name = "Mod";
             bindings = <
-&bt BT_SEL 0  &kp F1           &kp F2        &kp F3        &kp F4        &kp F5       &none                                                       &trans           &kp F6          &kp F7            &kp F8                &kp F9                 &kp F10               &kp F11
-&bt BT_SEL 1  &kp GRAVE        &none         &none         &none         &none        &bootloader                                                 &bootloader      &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp RIGHT_BRACE        &kp NON_US_BACKSLASH  &kp F12
-&kp CAPSLOCK  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT  &none        &none  &none           &bt BT_CLR  &none       &kp ESC          &kp CARET       &kp AMPERSAND     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK          &none
-&none         &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                           &email          &none                                    &kp NUMBER_6    &kp N7            &kp N8                &kp N9                 &kp N0                &none
-&tog 0        &none            &none         &kp LEFT      &kp RIGHT                  &none        &none  &something      &none       &bl BL_TOG  &rgb_ug RGB_TOG                  &kp UP_ARROW      &kp DOWN              &none                  &none                 &tog 0
+&bt BT_SEL 0  &none       &none            &none             &none           &none        &none                                                               &trans       &none      &none            &none                 &none                  &kp F10        &kp F11
+&bt BT_SEL 1  &kp TILDE   &kp AT_SIGN      &kp HASH          &kp DOLLAR      &kp B        &bootloader                                                         &bootloader  &kp J      &kp AMPERSAND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &kp F12
+&kp CAPSLOCK  &kp A       &kp EXCLAMATION  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp PERCENT  &none          &kp LEFT_ALT  &none           &bt BT_CLR  &none      &none        &kp CARET  &kp RIGHT_BRACE  &kp RIGHT_BRACKET     &kp I                  &kp ASTERISK   &kp GRAVE
+&none         &kp F1      &kp F2           &kp F3            &kp F4          &kp F5                                    &email          &none                               &kp F6     &kp F7           &kp F8                &kp F9                 &kp BACKSLASH  &none
+&tog 0        &bl BL_TOG  &rgb_ug RGB_TOG  &kp LEFT          &kp RIGHT                    &kp BACKSPACE  &kp LCTRL     &something      &none       &kp ENTER  &kp SPACE               &kp UP_ARROW     &kp DOWN              &none                  &none          &tog 0
             >;
         };
 
