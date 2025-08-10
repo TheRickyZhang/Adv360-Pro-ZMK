@@ -141,11 +141,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&rgb_ug RGB_BRD  &kp N1     &kp N2      &kp N3    &kp N4     &kp N5  &tog 0                                                                                   &mo 1                      &kp N6  &kp N7  &kp N8     &kp N9       &kp N0         &rgb_ug RGB_BRI
-&kp TAB          &kp Q      &kp W       &kp F     &kp P      &kp B   &alttab                                                                                  &none                      &kp J   &kp L   &kp U      &kp Y        &kp SEMICOLON  &kp MINUS
-&kp EQUAL        &kp A      &kp R       &kp S     &kp T      &kp G   &powertoys             &mt LEFT_ALT ESCAPE  &mo 2         &kp LGUI      &kp ESCAPE       &none                      &kp M   &kp N   &kp E      &kp I        &kp O          &kp SQT
-&kp LSHFT        &kp Z      &kp X       &kp C     &kp D      &kp V                                               &kp HOME      &printscreen                                              &kp K   &kp H   &kp COMMA  &kp DOT      &kp FSLH       &kp RSHFT
-&to 1            &kp GRAVE  &caps_word  &kp LEFT  &kp RIGHT          &layertap 1 BACKSPACE  &mt LCTRL DELETE     &kp END       &copyall      &mt RCTRL ENTER  &layertapbalanced 1 SPACE          &kp UP  &kp DOWN   &key_repeat  &kp GRAVE      &to 2
+&rgb_ug RGB_BRD  &kp N1     &kp N2    &kp N3     &kp N4            &kp N5  &tog 0                                                               &mo 1              &kp N6  &kp N7             &kp N8     &kp N9        &kp N0         &kp BACKSLASH
+&kp TAB          &kp Q      &kp W     &kp F      &kp P             &kp B   &alttab                                                              &kp LEFT_BRACKET   &kp J   &kp L              &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
+&kp EQUAL        &kp A      &kp R     &kp S      &kp T             &kp G   &powertoys     &kp LEFT_ALT  &mo 2         &kp LGUI      &kp ESCAPE  &kp RIGHT_BRACKET  &kp M   &kp N              &kp E      &kp I         &kp O          &kp SQT
+&kp LSHFT        &kp Z      &kp X     &kp C      &kp D             &kp V                                &kp HOME      &printscreen                                 &kp K   &kp H              &kp COMMA  &kp DOT       &kp FSLH       &kp RSHFT
+&to 1            &kp GRAVE  &kp LEFT  &kp RIGHT  &kp LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL     &kp END       &copyall      &kp ENTER   &kp SPACE                  &kp RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp GRAVE      &to 2
             >;
         };
 
