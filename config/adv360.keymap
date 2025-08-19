@@ -42,6 +42,42 @@
             flavor = "balanced";
             hold-while-undecided;
         };
+
+        quote_swap: quote_swap {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUOTE_SWAP";
+            bindings = <&kp DOUBLE_QUOTES>, <&kp SQT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        flip_8: flip_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FLIP_8";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp KP_NUMBER_8>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        flip_7: flip_7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FLIP_7";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp KP_NUMBER_7>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        flip_6: flip_6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FLIP_6";
+            bindings = <&kp CARET>, <&kp KP_NUMBER_6>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -141,11 +177,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&rgb_ug RGB_BRD  &kp N1     &kp N2    &kp N3     &kp N4            &kp N5  &tog 0                                                           &mo 1       &kp N6  &kp N7             &kp N8     &kp N9        &kp N0         &none
-&kp TAB          &kp Q      &kp W     &kp F      &kp P             &kp B   &alttab                                                          &caps_word  &kp J   &kp L              &kp U      &kp Y         &kp SEMICOLON  &kp DELETE
-&kp ESC          &kp A      &kp R     &kp S      &kp T             &kp G   &powertoys     &mo 1      &kp LALT      &kp LGUI      &mo 1      &none       &kp M   &kp N              &kp E      &kp I         &kp O          &kp SQT
-&kp LSHFT        &kp Z      &kp X     &kp C      &kp D             &kp V                             &kp HOME      &printscreen                         &kp K   &kp H              &kp COMMA  &kp DOT       &kp FSLH       &kp RSHFT
-&to 2            &kp GRAVE  &kp LEFT  &kp RIGHT  &kp LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall      &kp ENTER  &kp SPACE           &kp RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp GRAVE      &to 1
+&kp CAPSLOCK  &kp N1     &kp N2    &kp N3     &kp N4            &kp N5  &tog 0                                                                    &mo 1       &kp N6  &kp N7             &kp N8     &kp N9        &kp N0         &kp MINUS
+&kp TAB       &kp Q      &kp W     &kp F      &kp P             &kp B   &alttab                                                                   &caps_word  &kp J   &kp L              &kp U      &kp Y         &kp SEMICOLON  &quote_swap
+&kp EQUAL     &kp A      &kp R     &kp S      &kp T             &kp G   &powertoys     &mo 1      &kp LALT      &kp LGUI      &layertap 1 ESCAPE  &none       &kp M   &kp N              &kp E      &kp I         &kp O          &kp DELETE
+&kp LSHFT     &kp Z      &kp X     &kp C      &kp D             &kp V                             &kp HOME      &printscreen                                  &kp K   &kp H              &kp COMMA  &kp DOT       &kp FSLH       &kp RSHFT
+&to 2         &kp GRAVE  &kp LEFT  &kp RIGHT  &kp LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall      &kp ENTER           &kp SPACE           &kp RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp BACKSLASH  &to 1
             >;
         };
 
