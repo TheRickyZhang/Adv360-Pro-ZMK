@@ -180,7 +180,7 @@
 &kp TAB       &kp Q      &kp W     &kp F      &kp P             &kp B   &alttab                                                                   &caps_word  &kp J   &kp L              &kp U      &kp Y         &kp SEMICOLON  &quote_swap
 &kp EQUAL     &kp A      &kp R     &kp S      &kp T             &kp G   &powertoys     &mo 1      &kp LALT      &kp LGUI      &layertap 1 ESCAPE  &none       &kp M   &kp N              &kp E      &kp I         &kp O          &kp DELETE
 &kp LSHFT     &kp Z      &kp X     &kp C      &kp D             &kp V                             &kp HOME      &printscreen                                  &kp K   &kp H              &kp COMMA  &kp DOT       &kp FSLH       &kp RSHFT
-&to 2         &kp GRAVE  &kp LEFT  &kp RIGHT  &kp LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall      &kp ENTER           &kp SPACE           &kp RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp BACKSLASH  &to 1
+&to 3         &kp GRAVE  &kp LEFT  &kp RIGHT  &kp LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall      &kp ENTER           &kp SPACE           &kp RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp BACKSLASH  &to 1
             >;
         };
 
@@ -195,6 +195,16 @@
             >;
         };
 
+        macros {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
         mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &trans  &trans          &trans          &trans           &trans  &trans
@@ -202,16 +212,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB5  &trans  &trans  &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                    &trans  &trans          &mmv MOVE_DOWN  &trans           &trans  &trans
 &to 0   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &mkp MB4  &trans          &trans          &trans          &trans           &trans  &to 0
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
