@@ -159,6 +159,20 @@
 
             label = "PRINTSCREEN";
         };
+
+        linkedin: linkedin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp I &kp N &kp K &kp E &kp D &kp I &kp N &kp DOT &kp C &kp O &kp M &kp FSLH &kp I &kp N &kp FSLH &kp T &kp H &kp E &kp R &kp I &kp C &kp K &kp Y &kp Z &kp H &kp A &kp N &kp G>;
+            label = "LINKEDIN";
+        };
+
+        university: university {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(U) &kp N &kp I &kp V &kp E &kp R &kp S &kp I &kp T &kp Y &kp SPACE &kp O &kp F &kp SPACE &kp LS(F) &kp L &kp O &kp R &kp I &kp D &kp A>;
+            label = "UNIVERSITY";
+        };
     };
 
     combos {
@@ -197,11 +211,11 @@
 
         macros {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans     &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &linkedin  &university  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans     &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans       &trans  &trans  &trans
             >;
         };
 
