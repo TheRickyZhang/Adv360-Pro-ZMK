@@ -173,6 +173,20 @@
             bindings = <&kp LS(U) &kp N &kp I &kp V &kp E &kp R &kp S &kp I &kp T &kp Y &kp SPACE &kp O &kp F &kp SPACE &kp LS(F) &kp L &kp O &kp R &kp I &kp D &kp A>;
             label = "UNIVERSITY";
         };
+
+        github: github {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp G &kp I &kp T &kp H &kp U &kp B &kp DOT &kp C &kp O &kp M &kp FSLH &kp T &kp H &kp E &kp R &kp I &kp C &kp K &kp Y &kp Z &kp H &kp A &kp N &kp G>;
+            label = "GITHUB";
+        };
+
+        full_name: full_name {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(R) &kp I &kp C &kp K &kp Y &kp SPACE &kp LS(Z) &kp H &kp A &kp N &kp G>;
+            label = "FULL_NAME";
+        };
     };
 
     combos {
@@ -211,11 +225,11 @@
 
         macros {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans     &trans       &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &linkedin  &university  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans     &trans       &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans     &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans                                      &trans  &trans  &trans      &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans                                      &trans  &trans  &linkedin   &university  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &github  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &full_name  &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &trans      &trans                  &trans  &trans      &trans       &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans      &trans  &trans  &trans          &trans      &trans       &trans  &trans  &trans
             >;
         };
 
