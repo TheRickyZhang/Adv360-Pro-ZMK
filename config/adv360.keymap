@@ -253,11 +253,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp CAPSLOCK  &kp N1     &kp N2    &kp N3     &kp N4            &kp N5  &tog 0                                                                    &mo 1       &kp N6  &kp N7             &kp N8     &kp N9        &kp N0         &kp MINUS
-&kp TAB       &kp Q      &kp W     &kp F      &kp P             &kp B   &alttab                                                                   &caps_word  &kp J   &kp L              &kp U      &kp Y         &kp SEMICOLON  &quote_swap
-&kp EQUAL     &kp A      &kp R     &kp S      &kp T             &kp G   &powertoys     &mo 1      &kp LALT      &kp LGUI      &layertap 1 ESCAPE  &none       &kp M   &kp N              &kp E      &kp I         &kp O          &kp DELETE
-&kp LSHFT     &kp Z      &kp X     &kp C      &kp D             &kp V                             &kp HOME      &printscreen                                  &kp K   &kp H              &kp COMMA  &kp DOT       &kp FSLH       &kp RSHFT
-&to 3         &kp GRAVE  &kp LEFT  &kp RIGHT  &kp LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall      &kp ENTER           &kp SPACE           &kp RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp BACKSLASH  &to 1
+&none      &kp N1     &kp N2    &kp N3     &kp N4            &kp N5  &tog 0                                                                    &mo 1       &kp N6  &kp N7             &kp N8     &kp N9        &kp N0         &to 2
+&kp TAB    &kp Q      &kp W     &kp F      &kp P             &kp B   &alttab                                                                   &caps_word  &kp J   &kp L              &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
+&kp EQUAL  &kp A      &kp R     &kp S      &kp T             &kp G   &powertoys     &mo 1      &kp LALT      &kp LGUI      &layertap 1 ESCAPE  &none       &kp M   &kp N              &kp E      &kp I         &kp O          &quote_swap
+&kp LSHFT  &kp Z      &kp X     &kp C      &kp D             &kp V                             &kp HOME      &printscreen                                  &kp K   &kp H              &kp COMMA  &kp DOT       &kp FSLH       &kp RSHFT
+&to 3      &kp GRAVE  &kp LEFT  &kp RIGHT  &kp LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall      &kp ENTER           &kp SPACE           &kp RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp BACKSLASH  &to 1
             >;
         };
 
