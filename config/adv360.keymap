@@ -187,6 +187,20 @@
             bindings = <&kp LS(R) &kp I &kp C &kp K &kp Y &kp SPACE &kp LS(Z) &kp H &kp A &kp N &kp G>;
             label = "FULL_NAME";
         };
+
+        first_name: first_name {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(R) &kp I &kp C &kp K &kp Y>;
+            label = "FIRST_NAME";
+        };
+
+        last_name: last_name {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(Z) &kp H &kp A &kp N &kp G>;
+            label = "LAST_NAME";
+        };
     };
 
     combos {
@@ -225,11 +239,11 @@
 
         macros {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans   &trans                                      &trans  &trans  &trans      &trans       &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans                                      &trans  &trans  &linkedin   &university  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &github  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &full_name  &trans       &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                   &trans      &trans                  &trans  &trans      &trans       &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans           &trans  &trans  &trans      &trans  &trans  &trans          &trans      &trans       &trans  &trans  &trans
+&trans  &trans      &trans       &trans  &trans  &trans   &trans                                      &trans  &trans  &trans      &trans       &trans  &trans  &trans
+&trans  &trans      &trans       &trans  &trans  &trans   &trans                                      &trans  &trans  &linkedin   &university  &trans  &trans  &trans
+&trans  &trans      &first_name  &trans  &trans  &github  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &full_name  &trans       &trans  &trans  &trans
+&trans  &last_name  &trans       &trans  &trans  &trans                   &trans      &trans                  &trans  &trans      &trans       &trans  &trans  &trans
+&trans  &trans      &trans       &trans  &trans           &trans  &trans  &trans      &trans  &trans  &trans          &trans      &trans       &trans  &trans  &trans
             >;
         };
 
