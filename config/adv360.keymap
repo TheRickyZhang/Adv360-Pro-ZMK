@@ -201,6 +201,20 @@
             bindings = <&kp LS(Z) &kp H &kp A &kp N &kp G>;
             label = "LAST_NAME";
         };
+
+        start_date: start_date {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N8 &kp FSLH &kp N2 &kp N0 &kp N2 &kp N3>;
+            label = "START_DATE";
+        };
+
+        end_date: end_date {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N5 &kp FSLH &kp N2 &kp N0 &kp N2 &kp N7>;
+            label = "END_DATE";
+        };
     };
 
     combos {
@@ -239,11 +253,11 @@
 
         macros {
             bindings = <
-&trans  &trans      &trans       &trans  &trans  &trans   &trans                                      &trans  &trans  &trans      &trans       &trans  &trans  &trans
-&trans  &trans      &trans       &trans  &trans  &trans   &trans                                      &trans  &trans  &linkedin   &university  &trans  &trans  &trans
-&trans  &trans      &first_name  &trans  &trans  &github  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &full_name  &trans       &trans  &trans  &trans
-&trans  &last_name  &trans       &trans  &trans  &trans                   &trans      &trans                  &trans  &trans      &trans       &trans  &trans  &trans
-&trans  &trans      &trans       &trans  &trans           &trans  &trans  &trans      &trans  &trans  &trans          &trans      &trans       &trans  &trans  &trans
+&trans  &trans      &trans       &trans       &trans  &trans   &trans                                      &trans  &trans  &trans      &trans       &trans  &trans  &trans
+&trans  &trans      &trans       &trans       &trans  &trans   &trans                                      &trans  &trans  &linkedin   &university  &trans  &trans  &trans
+&trans  &trans      &first_name  &start_date  &trans  &github  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &full_name  &end_date    &trans  &trans  &trans
+&trans  &last_name  &trans       &trans       &trans  &trans                   &trans      &trans                  &trans  &trans      &trans       &trans  &trans  &trans
+&trans  &trans      &trans       &trans       &trans           &trans  &trans  &trans      &trans  &trans  &trans          &trans      &trans       &trans  &trans  &trans
             >;
         };
 
