@@ -243,7 +243,7 @@
 
         quickescape {
             bindings = <&kp ESCAPE>;
-            key-positions = <65 70>;
+            key-positions = <35 38>;
         };
     };
 
