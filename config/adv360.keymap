@@ -268,7 +268,7 @@
 &trans  &trans      &trans       &trans         &trans      &trans          &trans                                      &trans  &trans  &trans      &trans       &trans  &trans  &trans
 &trans  &trans      &website     &trans         &something  &trans          &trans                                      &trans  &trans  &linkedin   &university  &trans  &trans  &trans
 &trans  &trans      &first_name  &start_date    &end_date   &github         &trans  &trans  &trans      &trans  &trans  &trans  &trans  &full_name  &email       &trans  &trans  &trans
-&trans  &last_name  &trans       &cpp_template  &trans      &neovim_config                  &trans      &trans                  &trans  &trans      &trans       &trans  &trans  &trans
+&trans  &last_name  &trans       &cpp_template  &trans      &neovim_config                  &trans      &none                   &trans  &trans      &trans       &trans  &trans  &trans
 &trans  &trans      &trans       &trans         &trans                      &trans  &trans  &trans      &trans  &trans  &trans          &trans      &trans       &trans  &trans  &trans
             >;
         };
