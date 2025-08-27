@@ -270,17 +270,17 @@
 
         macros {
             bindings = <
-&trans  &trans      &trans       &trans         &trans      &trans          &trans                                      &trans  &trans  &trans        &trans        &trans        &trans  &trans
+&trans  &trans      &trans       &trans         &trans      &trans          &trans                                      &trans  &trans  &trans        &trans        &trans        &trans  &to 0
 &trans  &trans      &website     &university    &something  &linkedin       &trans                                      &trans  &trans  &kp N7        &kp N8        &kp N9        &trans  &trans
 &trans  &full_name  &first_name  &start_date    &end_date   &github         &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp N4        &kp N5        &kp NUMBER_6  &trans  &trans
 &trans  &last_name  &trans       &cpp_template  &trans      &neovim_config                  &trans      &none                   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-&trans  &trans      &trans       &trans         &trans                      &trans  &trans  &trans      &trans  &trans  &trans          &trans        &kp N0        &trans        &trans  &trans
+&to 0   &trans      &trans       &trans         &trans                      &trans  &trans  &trans      &trans  &trans  &trans          &trans        &kp N0        &trans        &trans  &to 0
             >;
         };
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &trans  &trans          &trans          &trans           &trans  &to 0
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB5  &trans  &trans  &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                    &trans  &trans          &mmv MOVE_DOWN  &trans           &trans  &trans
