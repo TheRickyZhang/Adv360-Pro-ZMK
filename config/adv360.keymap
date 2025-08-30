@@ -121,18 +121,7 @@
         copyall: copyall {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp G &kp G>,
-                <&macro_press>,
-                <&kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp V &kp G>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT>,
-                <&macro_tap>,
-                <&kp Y>;
-
+            bindings = <&kp G &kp O &kp LS(V) &kp LS(G)>;
             label = "COPYALL";
         };
 
@@ -270,11 +259,11 @@
 
         macros {
             bindings = <
-&to 0   &trans         &trans       &trans       &trans      &trans          &trans                                      &trans  &trans  &trans        &kp SLASH     &kp ASTERISK  &trans     &to 0
-&trans  &cpp_template  &website     &university  &something  &linkedin       &trans                                      &trans  &trans  &kp N7        &kp N8        &kp N9        &kp MINUS  &trans
-&trans  &trans         &first_name  &start_date  &end_date   &github         &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp N4        &kp N5        &kp NUMBER_6  &kp PLUS   &trans
-&trans  &last_name     &full_name   &trans       &trans      &neovim_config                  &trans      &none                   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER  &trans
-&to 0   &trans         &trans       &trans       &trans                      &trans  &trans  &trans      &trans  &trans  &kp N0          &trans        &kp N0        &kp PERIOD    &trans     &to 0
+&to 0   &trans      &trans       &trans       &trans      &trans          &trans                                      &trans  &trans  &trans        &kp SLASH     &kp ASTERISK  &trans     &to 0
+&trans  &trans      &website     &university  &something  &linkedin       &trans                                      &trans  &trans  &kp N7        &kp N8        &kp N9        &kp MINUS  &trans
+&trans  &trans      &first_name  &start_date  &end_date   &github         &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp N4        &kp N5        &kp NUMBER_6  &kp PLUS   &trans
+&trans  &last_name  &full_name   &trans       &trans      &neovim_config                  &trans      &none                   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER  &trans
+&to 0   &trans      &trans       &trans       &trans                      &trans  &trans  &trans      &trans  &trans  &kp N0          &trans        &kp N0        &kp PERIOD    &trans     &to 0
             >;
         };
 
