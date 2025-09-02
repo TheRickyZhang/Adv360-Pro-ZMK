@@ -99,9 +99,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_ALT &kp RIGHT_WIN>,
-                <&macro_tap>,
-                <&kp SPACE>,
+                <&kp LEFT_ALT &kp RIGHT_WIN &kp SPACE>,
                 <&macro_release>,
                 <&kp LEFT_ALT &kp RIGHT_WIN>;
 
@@ -136,7 +134,7 @@
         linkedin: linkedin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp L &kp I &kp N &kp K &kp E &kp D &kp I &kp N &kp DOT &kp C &kp O &kp M &kp FSLH &kp I &kp N &kp FSLH &kp T &kp H &kp E &kp R &kp I &kp C &kp K &kp Y &kp Z &kp H &kp A &kp N &kp G>;
+            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp W &kp W &kp W &kp DOT &kp L &kp I &kp N &kp K &kp E &kp D &kp I &kp N &kp DOT &kp C &kp O &kp M &kp FSLH &kp I &kp N &kp FSLH &kp T &kp H &kp E &kp R &kp I &kp C &kp K &kp Y &kp Z &kp H &kp A &kp N &kp G &kp FSLH>;
             label = "LINKEDIN";
         };
 
@@ -216,6 +214,13 @@
             bindings = <&kp LS(H) &kp Y &kp P &kp E &kp R &kp I &kp O &kp S &kp N1 &kp N9 &kp N6 &kp DLLR>;
             label = "SOMETHING";
         };
+
+        computerscience: computerscience {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(C) &kp O &kp M &kp P &kp U &kp T &kp E &kp R &kp SPACE &kp LS(S) &kp C &kp I &kp E &kp N &kp C &kp E>;
+            label = "COMPUTERSCIENCE";
+        };
     };
 
     combos {
@@ -259,11 +264,11 @@
 
         macros {
             bindings = <
-&to 0   &trans      &trans       &trans       &trans      &trans          &trans                                      &trans  &trans  &trans        &kp SLASH     &kp ASTERISK  &trans     &to 0
-&trans  &trans      &website     &university  &something  &linkedin       &trans                                      &trans  &trans  &kp N7        &kp N8        &kp N9        &kp MINUS  &trans
-&trans  &trans      &first_name  &start_date  &end_date   &github         &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp N4        &kp N5        &kp NUMBER_6  &kp PLUS   &trans
-&trans  &last_name  &full_name   &trans       &trans      &neovim_config                  &trans      &none                   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER  &trans
-&to 0   &trans      &trans       &trans       &trans                      &trans  &trans  &trans      &trans  &trans  &kp N0          &trans        &kp N0        &kp PERIOD    &trans     &to 0
+&to 0   &trans      &trans       &trans            &trans      &trans          &trans                                      &trans  &trans  &trans        &kp SLASH     &kp ASTERISK  &trans     &to 0
+&trans  &trans      &website     &university       &something  &linkedin       &trans                                      &trans  &trans  &kp N7        &kp N8        &kp N9        &kp MINUS  &trans
+&trans  &trans      &first_name  &start_date       &end_date   &github         &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp N4        &kp N5        &kp NUMBER_6  &kp PLUS   &trans
+&trans  &last_name  &full_name   &computerscience  &trans      &neovim_config                  &trans      &none                   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER  &trans
+&to 0   &trans      &trans       &trans            &trans                      &trans  &trans  &trans      &trans  &trans  &kp N0          &trans        &kp N0        &kp PERIOD    &trans     &to 0
             >;
         };
 
