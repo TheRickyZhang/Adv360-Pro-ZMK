@@ -20,15 +20,15 @@
             hold-trigger-on-release;
         };
 
-        layertap: layertap {
+        layertapLeftBracket: layertapLeftBracket {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYERTAP";
+            label = "LAYERTAPLEFTBRACKET";
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <120>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
 
-            hold-trigger-key-positions = <22 23 24 25 26 40 41 42 44 54 55 56 57 58 70>;
+            hold-trigger-key-positions = <23 24 25 26 40 41 42 44 55 56 57 58 70 43 54 22 69 38>;
         };
 
         quote_swap: quote_swap {
@@ -65,6 +65,17 @@
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        layertapRightBracket: layertapRightBracket {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYERTAPRIGHTBRACKET";
+            #binding-cells = <2>;
+            tapping-term-ms = <120>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+
+            hold-trigger-key-positions = <65 15 16 17 18 19 29 30 31 32 33 47 48 49 50 51 35 66>;
         };
     };
 
@@ -246,22 +257,22 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&to 4      &kp N1     &kp N2    &kp N3     &kp N4                    &kp N5  &tog 5                                                        &mo 1       &kp N6  &kp N7             &kp N8     &kp N9        &kp N0         &to 2
-&kp TAB    &kp Q      &kp W     &kp F      &kp P                     &kp B   &alttab                                                       &caps_word  &kp J   &kp L              &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
-&kp EQUAL  &kp A      &kp R     &kp S      &kp T                     &kp G   &powertoys     &mo 1      &kp LALT      &kp LGUI  &kp ESCAPE  &kp DELETE  &kp M   &kp N              &kp E      &kp I         &kp O          &quote_swap
-&kp LSHFT  &kp Z      &kp X     &kp C      &kp D                     &kp V                             &kp HOME      &mo 2                             &kp K   &kp H              &kp COMMA  &kp DOT       &kp FSLH       &kp RSHFT
-&to 3      &kp GRAVE  &kp LEFT  &kp RIGHT  &layertap 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall  &kp ENTER   &kp SPACE           &kp RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp GRAVE      &to 1
+&to 4      &kp N1     &kp N2    &kp N3     &kp N4                               &kp N5  &tog 5                                                        &mo 1       &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 2
+&kp TAB    &kp Q      &kp W     &kp F      &kp P                                &kp B   &alttab                                                       &caps_word  &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
+&kp EQUAL  &kp A      &kp R     &kp S      &kp T                                &kp G   &powertoys     &mo 1      &kp LALT      &kp LGUI  &kp ESCAPE  &kp DELETE  &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
+&kp LSHFT  &kp Z      &kp X     &kp C      &kp D                                &kp V                             &kp HOME      &mo 2                             &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &kp RSHFT
+&to 3      &kp GRAVE  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall  &kp ENTER   &kp SPACE           &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp GRAVE      &to 1
             >;
         };
 
         mod {
             display-name = "Mod";
             bindings = <
-&to 0         &kp F1  &kp F2           &kp F3  &kp F4     &kp F5  &bt BT_SEL 1                                               &bt BT_SEL 0  &kp F6         &kp F7                &kp F8                 &kp F9            &kp F10        &to 0
-&kp CAPSLOCK  &trans  &kp TILDE        &trans  &trans     &trans  &bootloader                                                &bootloader   &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOLLAR        &kp PERCENT    &trans
-&trans        &trans  &kp EXCLAMATION  &kp AT  &kp EQUAL  &trans  &bt BT_NXT         &trans  &trans      &trans      &trans  &bt BT_CLR    &kp HASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK      &kp BACKSLASH  &trans
-&trans        &trans  &trans           &trans  &trans     &trans                             &trans      &email                            &kp AMPERSAND  &kp UNDERSCORE        &kp LESS_THAN          &kp GREATER_THAN  &kp PIPE       &trans
-&to 0         &trans  &trans           &trans  &trans             &kp LC(BACKSPACE)  &trans  &trans      &something  &trans  &kp TAB                      &trans                &trans                 &trans            &trans         &to 0
+&to 0         &kp F1  &kp F2           &kp F3            &kp F4            &kp F5  &bt BT_SEL 1                                               &bt BT_SEL 0  &kp F6         &kp F7                &kp F8                 &kp F9           &kp F10        &to 0
+&kp CAPSLOCK  &trans  &kp TILDE        &trans            &trans            &trans  &bootloader                                                &bootloader   &kp CARET      &kp HASH              &kp ASTERISK           &kp DOLLAR       &kp PERCENT    &trans
+&trans        &kp AT  &kp EXCLAMATION  &kp TILDE         &kp EQUAL         &trans  &bt BT_NXT         &trans  &trans      &trans      &trans  &bt BT_CLR    &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans           &kp PIPE       &trans
+&trans        &trans  &kp LESS_THAN    &kp GREATER_THAN  &trans            &trans                             &trans      &email                            &trans         &kp UNDERSCORE        &kp LEFT_BRACE         &kp RIGHT_BRACE  &kp BACKSLASH  &trans
+&to 0         &trans  &trans           &trans            &kp LEFT_BRACKET          &kp LC(BACKSPACE)  &trans  &trans      &something  &trans  &kp TAB                      &kp RIGHT_BRACKET     &trans                 &trans           &trans         &to 0
             >;
         };
 
