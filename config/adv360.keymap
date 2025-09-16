@@ -28,7 +28,7 @@
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
 
-            hold-trigger-key-positions = <23 24 25 26 40 41 42 44 55 56 57 58 70 43 54 22 69 38>;
+            hold-trigger-key-positions = <23 24 25 26 40 41 42 44 55 56 57 58 70 69 38 22>;
         };
 
         quote_swap: quote_swap {
@@ -268,11 +268,11 @@
         mod {
             display-name = "Mod";
             bindings = <
-&to 0         &kp F1  &kp F2           &kp F3            &kp F4            &kp F5  &bt BT_SEL 1                                               &bt BT_SEL 0  &kp F6         &kp F7                &kp F8                 &kp F9           &kp F10        &to 0
-&kp CAPSLOCK  &trans  &kp TILDE        &trans            &trans            &trans  &bootloader                                                &bootloader   &kp CARET      &kp HASH              &kp ASTERISK           &kp DOLLAR       &kp PERCENT    &trans
-&trans        &kp AT  &kp EXCLAMATION  &kp TILDE         &kp EQUAL         &trans  &bt BT_NXT         &trans  &trans      &trans      &trans  &bt BT_CLR    &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans           &kp PIPE       &trans
-&trans        &trans  &kp LESS_THAN    &kp GREATER_THAN  &trans            &trans                             &trans      &email                            &trans         &kp UNDERSCORE        &kp LEFT_BRACE         &kp RIGHT_BRACE  &kp BACKSLASH  &trans
-&to 0         &trans  &trans           &trans            &kp LEFT_BRACKET          &kp LC(BACKSPACE)  &trans  &trans      &something  &trans  &kp TAB                      &kp RIGHT_BRACKET     &trans                 &trans           &trans         &to 0
+&to 0         &kp F1  &kp F2           &kp F3            &kp F4            &kp F5         &bt BT_SEL 1                                               &bt BT_SEL 0  &kp F6           &kp F7                &kp F8                 &kp F9      &kp F10        &to 0
+&kp CAPSLOCK  &trans  &kp RS(LEFT)     &trans            &trans            &kp RS(RIGHT)  &bootloader                                                &bootloader   &kp CARET        &kp HASH              &kp ASTERISK           &kp DOLLAR  &kp PERCENT    &kp UNDERSCORE
+&trans        &kp AT  &kp EXCLAMATION  &kp TILDE         &kp EQUAL         &trans         &bt BT_NXT         &trans  &trans      &trans      &trans  &bt BT_CLR    &kp AMPERSAND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans      &kp PIPE       &trans
+&trans        &trans  &kp LESS_THAN    &kp GREATER_THAN  &trans            &trans                                    &trans      &email                            &kp EXCLAMATION  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE   &kp BACKSLASH  &trans
+&to 0         &trans  &trans           &trans            &kp LEFT_BRACKET                 &kp LC(BACKSPACE)  &trans  &trans      &something  &trans  &kp TAB                        &kp RIGHT_BRACKET     &trans                 &trans      &trans         &to 0
             >;
         };
 
