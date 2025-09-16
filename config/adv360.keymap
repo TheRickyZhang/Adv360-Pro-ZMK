@@ -278,7 +278,7 @@
 &to 0         &kp F1       &kp F2                &kp F3                &kp F4            &kp F5         &bt BT_SEL 1                                                  &bt BT_SEL 0  &kp F6         &kp F7                &kp F8                 &kp F9      &kp F10        &to 0
 &kp CAPSLOCK  &trans       &kp LC(LEFT)          &trans                &trans            &kp RC(RIGHT)  &bootloader                                                   &bootloader   &kp CARET      &kp HASH              &kp ASTERISK           &kp DOLLAR  &kp PERCENT    &kp UNDERSCORE
 &trans        &kp AT       &kp EXCLAMATION       &kp TILDE             &kp EQUAL         &trans         &bt BT_NXT         &trans  &trans      &trans      &trans     &bt BT_CLR    &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans      &kp PIPE       &trans
-&trans        &kp K_MUTE   &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PLAY_PAUSE  &trans                                    &trans      &email                               &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE   &kp BACKSLASH  &trans
+&trans        &kp C_MUTE   &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PLAY_PAUSE  &trans                                    &trans      &email                               &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp TILDE   &kp BACKSLASH  &trans
 &to 0         &kp C_SLEEP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LEFT_BRACKET                 &kp LC(BACKSPACE)  &trans  &trans      &something  &endEnter  &kp TAB                      &kp RIGHT_BRACKET     &trans                 &trans      &trans         &to 0
             >;
         };
