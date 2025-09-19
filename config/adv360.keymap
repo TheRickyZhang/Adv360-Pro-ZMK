@@ -29,7 +29,7 @@
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
 
-            hold-trigger-key-positions = <23 24 25 26 40 41 42 44 55 56 57 58 70 69 38 22>;
+            hold-trigger-key-positions = <23 24 25 26 40 41 42 44 55 56 57 58 70 69 38 22 37 38 53 68 69>;
         };
 
         quote_swap: quote_swap {
@@ -76,7 +76,7 @@
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
 
-            hold-trigger-key-positions = <65 15 16 17 18 19 29 30 31 32 33 47 48 49 50 51 35 66>;
+            hold-trigger-key-positions = <65 15 16 17 18 19 29 30 31 32 33 47 48 49 50 51 35 66 35 36 52 66 67>;
         };
     };
 
