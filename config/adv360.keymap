@@ -310,11 +310,11 @@
 
         mouse {
             bindings = <
-&to 0   &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &trans  &trans          &trans          &trans           &trans  &to 0
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB5  &trans  &trans  &mmv MOVE_LEFT  &mkp MCLK       &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                    &trans  &trans          &mmv MOVE_DOWN  &trans           &trans  &trans
-&to 0   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &mkp MB4  &trans          &trans          &trans          &trans           &trans  &to 0
+&to 0   &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &trans          &trans          &trans          &trans           &trans  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &msc SCRL_DOWN  &mkp MB4        &mkp MCLK       &mkp MB5         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB5  &trans  &trans          &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&to 0   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &mkp MB4  &trans                  &trans          &trans          &trans           &trans  &to 0
             >;
         };
 
