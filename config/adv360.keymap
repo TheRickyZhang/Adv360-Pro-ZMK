@@ -10,17 +10,6 @@
         #include "macros.dtsi"
       #include "version.dtsi"
 
-        modkeyrepeat: modkeyrepeat {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MODKEYREPEAT";
-            bindings = <&kp>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-        };
-
         layertapLeftBracket: layertapLeftBracket {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYERTAPLEFTBRACKET";
@@ -29,7 +18,7 @@
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
 
-            hold-trigger-key-positions = <23 24 25 26 40 41 42 44 55 56 57 58 70 69 38 22 37 38 53 68 69>;
+            hold-trigger-key-positions = <23 24 25 26 40 41 42 44 55 56 57 58 70 69 38 22 37 38 53 68 69 71 72 73 74>;
         };
 
         quote_swap: quote_swap {
@@ -41,33 +30,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        flip_8: flip_8 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "FLIP_8";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp KP_NUMBER_8>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        flip_7: flip_7 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "FLIP_7";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp KP_NUMBER_7>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        flip_6: flip_6 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "FLIP_6";
-            bindings = <&kp CARET>, <&kp KP_NUMBER_6>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
         layertapRightBracket: layertapRightBracket {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYERTAPRIGHTBRACKET";
@@ -76,7 +38,7 @@
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
 
-            hold-trigger-key-positions = <65 15 16 17 18 19 29 30 31 32 33 47 48 49 50 51 35 66 35 36 52 66 67>;
+            hold-trigger-key-positions = <65 15 16 17 18 19 29 30 31 32 33 47 48 49 50 51 35 66 35 36 52 66 67 61 62 63 64>;
         };
     };
 
