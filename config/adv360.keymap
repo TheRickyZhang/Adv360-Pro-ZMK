@@ -253,6 +253,13 @@
             bindings = <&kp N9 &kp N0 &kp N4 &kp N3 &kp N4 &kp N2 &kp N9 &kp N1 &kp N7 &kp N0>;
             label = "PHONE_NUMBER";
         };
+
+        country: country {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(U) &kp N &kp I &kp T &kp E &kp D &kp SPACE &kp LS(S) &kp T &kp A &kp T &kp E &kp S>;
+            label = "COUNTRY";
+        };
     };
 
     combos {
@@ -301,11 +308,11 @@
 
         macros {
             bindings = <
-&to 0   &trans          &trans       &trans            &trans      &trans     &trans                                      &trans  &trans  &trans         &trans     &trans       &trans  &to 0
-&trans  &neovim_config  &website     &university       &something  &birthday  &trans                                      &trans  &trans  &linkedin      &username  &trans       &trans  &trans
-&trans  &trans          &first_name  &start_date       &end_date   &github    &trans  &trans  &trans      &trans  &trans  &trans  &trans  &phone_number  &email     &internship  &trans  &trans
-&trans  &last_name      &full_name   &computerscience  &trans      &trans                     &trans      &none                   &trans  &trans         &trans     &trans       &trans  &trans
-&to 0   &trans          &trans       &trans            &trans                 &trans  &trans  &trans      &trans  &trans  &kp N0          &trans         &trans     &trans       &trans  &to 0
+&to 0   &trans          &trans       &trans       &trans      &trans     &trans                                      &trans  &trans            &trans         &trans     &trans       &trans  &to 0
+&trans  &neovim_config  &website     &university  &something  &birthday  &trans                                      &trans  &trans            &linkedin      &username  &trans       &trans  &trans
+&trans  &trans          &first_name  &start_date  &end_date   &github    &trans  &trans  &trans      &trans  &trans  &trans  &computerscience  &phone_number  &email     &internship  &trans  &trans
+&trans  &last_name      &full_name   &country     &trans      &trans                     &trans      &none                   &trans            &trans         &trans     &trans       &trans  &trans
+&to 0   &trans          &trans       &trans       &trans                 &trans  &trans  &trans      &trans  &trans  &kp N0                    &trans         &trans     &trans       &trans  &to 0
             >;
         };
 
