@@ -308,11 +308,11 @@
 
         macros {
             bindings = <
-&to 0   &trans          &trans       &trans       &trans      &trans     &trans                                      &trans  &trans            &trans         &trans     &trans       &trans  &to 0
-&trans  &neovim_config  &website     &university  &something  &birthday  &trans                                      &trans  &trans            &linkedin      &username  &trans       &trans  &trans
-&trans  &trans          &first_name  &start_date  &end_date   &github    &trans  &trans  &trans      &trans  &trans  &trans  &computerscience  &phone_number  &email     &internship  &trans  &trans
-&trans  &last_name      &full_name   &country     &trans      &trans                     &trans      &none                   &trans            &trans         &trans     &trans       &trans  &trans
-&to 0   &trans          &trans       &trans       &trans                 &trans  &trans  &trans      &trans  &trans  &kp N0                    &trans         &trans     &trans       &trans  &to 0
+&to 0   &trans          &trans       &trans       &trans         &trans     &trans                                      &trans  &trans            &trans         &trans     &trans       &trans  &to 0
+&trans  &neovim_config  &website     &university  &phone_number  &birthday  &trans                                      &trans  &trans            &linkedin      &username  &trans       &trans  &trans
+&trans  &trans          &first_name  &start_date  &end_date      &github    &trans  &trans  &trans      &trans  &trans  &trans  &computerscience  &phone_number  &email     &internship  &trans  &trans
+&trans  &last_name      &full_name   &country     &trans         &trans                     &trans      &none                   &trans            &something     &trans     &trans       &trans  &trans
+&to 0   &trans          &trans       &trans       &trans                    &trans  &trans  &trans      &trans  &trans  &kp N0                    &trans         &trans     &trans       &trans  &to 0
             >;
         };
 
