@@ -282,7 +282,9 @@
                 <&macro_tap>,
                 <&kp C>,
                 <&macro_release>,
-                <&kp LCTRL &kp ESCAPE>;
+                <&kp LCTRL>,
+                <&macro_wait_time 40>,
+                <&kp ESCAPE>;
 
             label = "IDEAVIM_ESC";
         };
