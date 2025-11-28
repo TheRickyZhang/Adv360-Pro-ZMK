@@ -272,6 +272,20 @@
 
             label = "SUPER_I";
         };
+
+        ideavim_esc: ideavim_esc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp C>,
+                <&macro_release>,
+                <&kp LCTRL &kp ESCAPE>;
+
+            label = "IDEAVIM_ESC";
+        };
     };
 
     combos {
@@ -350,11 +364,11 @@
 
         EscToCtrlC {
             bindings = <
-&to 0   &trans  &trans  &trans  &trans  &trans  &trans                                         &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LC(C)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&to 0   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans     &trans          &trans  &trans  &trans  &trans  &to 0
+&to 0   &trans  &trans  &trans  &trans  &trans  &trans                                            &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                            &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &ideavim_esc  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&to 0   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans        &trans          &trans  &trans  &trans  &trans  &to 0
             >;
         };
     };
