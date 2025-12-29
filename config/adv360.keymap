@@ -296,6 +296,8 @@
                 <&macro_press>,
                 <&kp LCTRL &kp ENTER>,
                 <&macro_release>,
+                <&kp LCTRL &kp ENTER>,
+                <&macro_tap>,
                 <&kp LEFT_BRACKET>;
 
             label = "TMUX_NAV_MODE";
