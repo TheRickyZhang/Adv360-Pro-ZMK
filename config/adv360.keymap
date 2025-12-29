@@ -294,9 +294,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &kp ENTER>,
+                <&kp LCTRL &kp SPACE>,
                 <&macro_release>,
-                <&kp LCTRL &kp ENTER>,
+                <&kp LCTRL &kp SPACE>,
                 <&macro_tap>,
                 <&kp LEFT_BRACKET>;
 
