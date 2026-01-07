@@ -321,6 +321,11 @@
             bindings = <&mo 2>;
             key-positions = <46 59>;
         };
+
+        quick-alt-tab {
+            bindings = <&alttab>;
+            key-positions = <18 17>;
+        };
     };
 
     keymap {
@@ -329,11 +334,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&to 4      &kp N1       &kp N2    &kp N3     &kp N4                               &kp N5  &tog 5                                                                     &mo 1       &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 2
-&kp EQUAL  &kp Q        &kp W     &kp F      &kp P                                &kp B   &alttab                                                                    &caps_word  &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
-&kp TAB    &kp A        &kp R     &kp S      &kp T                                &kp G   &super_i       &kp LGUI   &kp LALT            &kp PRINTSCREEN  &kp ESCAPE  &kp DELETE  &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
-&kp LSHFT  &kp Z        &kp X     &kp C      &kp D                                &kp V                             &kp HOME            &kp END                                  &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &kp RSHFT
-&to 3      &key_repeat  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &tmux_nav_mode      &copyall         &kp ENTER   &kp SPACE           &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &key_repeat    &to 1
+&to 4       &kp N1     &kp N2    &kp N3     &kp N4                               &kp N5  &mo 1                                                                &tog 5       &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 2
+&caps_word  &kp Q      &kp W     &kp F      &kp P                                &kp B   &alttab                                                              &kp DELETE   &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
+&kp TAB     &kp A      &kp R     &kp S      &kp T                                &kp G   &key_repeat    &kp LGUI   &kp LALT      &kp PRINTSCREEN  &kp ESCAPE  &key_repeat  &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
+&sk LSHFT   &kp Z      &kp X     &kp C      &kp D                                &kp V                             &kp HOME      &tmux_nav_mode                            &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &sk RSHFT
+&to 3       &kp GRAVE  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall         &kp ENTER   &kp SPACE            &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp GRAVE      &to 1
             >;
         };
 
