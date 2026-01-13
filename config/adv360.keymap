@@ -319,7 +319,7 @@
 
         key_repeat_left {
             bindings = <&key_repeat>;
-            key-positions = <31 32>;
+            key-positions = <>;
         };
 
         layer2 {
@@ -329,7 +329,7 @@
 
         key_repeat_right {
             bindings = <&key_repeat>;
-            key-positions = <41 42>;
+            key-positions = <>;
         };
     };
 
