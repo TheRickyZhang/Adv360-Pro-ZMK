@@ -302,19 +302,24 @@
 
             label = "TMUX_NAV_MODE";
         };
+
+        email_uf: email_uf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp R &kp I &kp C &kp K &kp Y &kp Z &kp H &kp A &kp N &kp G &kp AT &kp U &kp F &kp L &kp DOT &kp E &kp D &kp U>;
+
+            label = "EMAIL_UF";
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        super {
-            bindings = <&kp LGUI>;
-            key-positions = <65 70>;
-        };
-
-        escape_alt {
-            bindings = <&kp ESCAPE>;
-            key-positions = <31 32 41 42>;
+        key_repeat_left {
+            bindings = <&key_repeat>;
+            key-positions = <31 32>;
         };
 
         layer2 {
@@ -322,9 +327,9 @@
             key-positions = <46 59>;
         };
 
-        quick-alt-tab {
-            bindings = <&alttab>;
-            key-positions = <18 17>;
+        key_repeat_right {
+            bindings = <&key_repeat>;
+            key-positions = <41 42>;
         };
     };
 
@@ -334,11 +339,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&to 4       &kp N1     &kp N2    &kp N3     &kp N4                               &kp N5  &mo 1                                                                &tog 5       &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 2
-&caps_word  &kp Q      &kp W     &kp F      &kp P                                &kp B   &alttab                                                              &kp DELETE   &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
-&kp TAB     &kp A      &kp R     &kp S      &kp T                                &kp G   &key_repeat    &kp LGUI   &kp LALT      &kp PRINTSCREEN  &kp ESCAPE  &key_repeat  &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
-&sk LSHFT   &kp Z      &kp X     &kp C      &kp D                                &kp V                             &kp HOME      &tmux_nav_mode                            &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &sk RSHFT
-&to 3       &kp GRAVE  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall         &kp ENTER   &kp SPACE            &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp GRAVE      &to 1
+&to 4      &kp N1     &kp N2    &kp N3     &kp N4                               &kp N5  &mo 1                                                                &tog 5      &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 2
+&kp GRAVE  &kp Q      &kp W     &kp F      &kp P                                &kp B   &alttab                                                              &caps_word  &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
+&kp TAB    &kp A      &kp R     &kp S      &kp T                                &kp G   &super_i       &kp LGUI   &kp LALT      &kp PRINTSCREEN  &kp ESCAPE  &kp DEL     &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
+&sk LSHFT  &kp Z      &kp X     &kp C      &kp D                                &kp V                             &kp HOME      &tmux_nav_mode                           &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &sk RSHFT
+&to 3      &kp GRAVE  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall         &kp ENTER   &kp SPACE           &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp GRAVE      &to 1
             >;
         };
 
@@ -358,8 +363,8 @@
 &to 0   &trans          &trans       &trans       &trans         &trans     &trans                                      &trans  &trans            &trans         &trans     &trans       &trans  &to 0
 &trans  &neovim_config  &website     &university  &phone_number  &birthday  &trans                                      &trans  &trans            &linkedin      &username  &trans       &trans  &trans
 &trans  &trans          &first_name  &start_date  &end_date      &github    &trans  &trans  &trans      &trans  &trans  &trans  &computerscience  &phone_number  &email     &internship  &trans  &trans
-&trans  &last_name      &full_name   &country     &trans         &trans                     &trans      &none                   &trans            &something     &trans     &trans       &trans  &trans
-&to 0   &trans          &trans       &trans       &trans                    &trans  &trans  &trans      &trans  &trans  &kp N0                    &trans         &trans     &trans       &trans  &to 0
+&trans  &last_name      &full_name   &country     &trans         &trans                     &trans      &none                   &trans            &something     &email_uf  &trans       &trans  &trans
+&to 0   &trans          &trans       &trans       &trans                    &trans  &trans  &trans      &trans  &trans  &trans                    &trans         &trans     &trans       &trans  &to 0
             >;
         };
 
