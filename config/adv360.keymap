@@ -17,7 +17,7 @@
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
 
-            hold-trigger-key-positions = <23 24 25 26 40 41 42 44 55 56 57 58 70 69 38 22 37 38 53 68 69 72 73 54 27 45 59>;
+            hold-trigger-key-positions = <23 24 25 26 40 41 42 44 55 56 58 70 69 38 22 37 38 53 68 69 72 73 27 45 59>;
         };
 
         quote_swap: quote_swap {
@@ -312,6 +312,20 @@
 
             label = "EMAIL_UF";
         };
+
+        lambda_capture: lambda_capture {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp AMPS &kp RBKT>;
+            label = "LAMBDA_CAPTURE";
+        };
+
+        mouse_back: mouse_back {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "MOUSE_BACK";
+        };
     };
 
     combos {
@@ -331,6 +345,11 @@
             bindings = <&key_repeat>;
             key-positions = <>;
         };
+
+        backtick {
+            bindings = <&kp GRAVE>;
+            key-positions = <56 57>;
+        };
     };
 
     keymap {
@@ -340,10 +359,10 @@
             display-name = "Base";
             bindings = <
 &to 4      &kp N1     &kp N2    &kp N3     &kp N4                               &kp N5  &mo 1                                                                &tog 5      &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 2
-&kp GRAVE  &kp Q      &kp W     &kp F      &kp P                                &kp B   &alttab                                                              &caps_word  &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
+&kp EQUAL  &kp Q      &kp W     &kp F      &kp P                                &kp B   &alttab                                                              &caps_word  &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
 &kp TAB    &kp A      &kp R     &kp S      &kp T                                &kp G   &super_i       &kp LGUI   &kp LALT      &kp PRINTSCREEN  &kp ESCAPE  &kp DEL     &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
 &sk LSHFT  &kp Z      &kp X     &kp C      &kp D                                &kp V                             &kp HOME      &tmux_nav_mode                           &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &sk RSHFT
-&to 3      &kp GRAVE  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall         &kp ENTER   &kp SPACE           &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &kp GRAVE      &to 1
+&to 3      &mkp LCLK  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &kp END       &copyall         &kp ENTER   &kp SPACE           &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &mkp RCLK      &to 1
             >;
         };
 
@@ -353,7 +372,7 @@
 &to 0             &kp F1             &kp F2           &kp F3            &kp F4                &kp F5                &bt BT_SEL 1                                                  &bt BT_SEL 0  &kp F6         &kp F7                &kp F8                 &kp F9            &kp F10        &kp C_POWER
 &kp C_PLAY_PAUSE  &kp AT             &kp LESS_THAN    &kp GREATER_THAN  &kp GRAVE             &kp TILDE             &bootloader                                                   &bootloader   &kp CARET      &kp HASH              &kp ASTERISK           &kp DOLLAR        &kp PERCENT    &kp UNDERSCORE
 &kp CAPSLOCK      &kp EXCLAMATION    &kp MINUS        &kp PLUS          &kp KP_EQUAL          &key_repeat           &bt BT_NXT         &trans  &trans      &trans      &trans     &bt BT_CLR    &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &kp PIPE       &kp F11
-&kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                             &trans      &email                               &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE        &playMacro        &kp BACKSLASH  &kp F12
+&kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                             &trans      &email                               &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE        &lambda_capture   &kp BACKSLASH  &kp F12
 &to 0             &trans             &kp RC(LEFT)     &kp RC(RIGHT)     &trans                                      &kp RC(BACKSPACE)  &trans  &trans      &something  &endEnter  &kp TAB                      &trans                &kp RC(DOWN)           &kp RC(UP_ARROW)  &trans         &to 0
             >;
         };
