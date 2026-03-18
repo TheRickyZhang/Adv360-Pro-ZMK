@@ -379,7 +379,8 @@
 
         backtick {
             bindings = <&kp GRAVE>;
-            key-positions = <57 58>;
+            key-positions = <55 56>;
+            layers = <0>;
         };
     };
 
