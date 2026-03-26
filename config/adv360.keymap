@@ -390,7 +390,7 @@
 
         layer-mouse-smooth {
             bindings = <&mo 4>;
-            key-positions = <18 17 16>;
+            key-positions = <17 16>;
         };
     };
 
