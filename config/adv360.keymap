@@ -385,12 +385,12 @@
 
         layer-mouse {
             bindings = <&mo 3>;
-            key-positions = <17 18>;
+            key-positions = <17 16>;
         };
 
-        layer-mouse-smooth {
-            bindings = <&mo 4>;
-            key-positions = <18 4 3 5>;
+        quick-tab-switch {
+            bindings = <&alttab>;
+            key-positions = <17 18>;
         };
     };
 
