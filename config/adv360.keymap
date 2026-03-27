@@ -390,7 +390,7 @@
 
         layer-mouse-smooth {
             bindings = <&mo 4>;
-            key-positions = <17 16>;
+            key-positions = <18 4 3 5>;
         };
     };
 
@@ -403,8 +403,8 @@
 &to 2      &kp N1       &kp N2    &kp N3     &kp N4                               &kp N5  &mo 4                                                                &tog 4      &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 3
 &kp EQUAL  &kp Q        &kp W     &kp F      &kp P                                &kp B   &alttab                                                              &caps_word  &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
 &kp TAB    &kp A        &kp R     &kp S      &kp T                                &kp G   &super_i       &kp LGUI   &kp LALT      &kp PRINTSCREEN  &kp ESCAPE  &kp DEL     &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
-&sk LSHFT  &kp Z        &kp X     &kp C      &kp D                                &kp V                             &to 3         &tmux_nav_mode                           &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &sk RSHFT
-&to 1      &key_repeat  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &to 4         &copyall         &kp ENTER   &kp SPACE           &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &key_repeat    &to 5
+&sk LSHFT  &kp Z        &kp X     &kp C      &kp D                                &kp V                             &tog 3        &tmux_nav_mode                           &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &sk RSHFT
+&to 1      &key_repeat  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &tog 4        &copyall         &kp ENTER   &kp SPACE           &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &key_repeat    &to 5
             >;
         };
 
@@ -431,11 +431,11 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &trans          &trans         &mkp RCLK       &trans         &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &msc SCRL_DOWN  &mkp LCLK      &kp LA(LG(K))   &mkp MCLK      &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB5  &trans  &msc SCRL_LEFT  &kp LG(LA(H))  &kp LA(LG(J))   &kp LA(LG(L))  &msc SCRL_RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                    &msc SCRL_UP    &trans         &mmv MOVE_DOWN  &trans         &trans           &trans
-&to 0   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &mkp MB4  &trans                  &trans         &trans          &trans         &trans           &to 0
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &trans          &trans          &mkp RCLK       &trans           &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &msc SCRL_DOWN  &mkp LCLK       &kp LA(LG(K))   &mkp MCLK        &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB5  &trans  &msc SCRL_LEFT  &kp LG(LA(H))   &kp LA(LG(J))   &kp LA(LG(L))    &msc SCRL_RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&to 0   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &mkp MB4  &trans                  &trans          &trans          &trans           &trans           &to 0
             >;
         };
 
@@ -451,7 +451,7 @@
 
         home_numrow {
             bindings = <
-&to 0   &trans        &trans        &trans        &trans        &trans  &trans                                      &trans  &trans        &trans  &trans  &trans  &trans  &to 0
+&trans  &trans        &trans        &trans        &trans        &trans  &trans                                      &trans  &trans        &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans        &trans  &trans                                      &trans  &trans        &trans  &trans  &trans  &trans  &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &trans  &trans  &trans      &trans  &trans  &trans  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
 &trans  &trans        &trans        &trans        &trans        &trans                  &trans      &trans                  &trans        &trans  &trans  &trans  &trans  &trans
