@@ -411,11 +411,11 @@
         mod {
             display-name = "Mod";
             bindings = <
-&bootloader   &kp F1             &kp F2           &kp F3            &kp F4        &kp F5       &trans                                                           &trans           &kp F6         &kp F7                &kp F8                 &kp F9            &kp F10             &kp C_POWER
-&kp C_PREV    &kp AT             &kp LESS_THAN    &kp GREATER_THAN  &kp GRAVE     &kp TILDE    &kp C_BRIGHTNESS_INC                                             &kp C_REC        &kp CARET      &kp HASH              &kp ASTERISK           &kp DOLLAR        &kp PERCENT         &spaced_cout
-&kp C_NEXT    &kp EXCLAMATION    &kp MINUS        &kp PLUS          &kp KP_EQUAL  &key_repeat  &kp C_BRI_DEC         &trans  &trans      &trans      &trans     &lambda_capture  &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &kp PIPE            &kp F11
-&kp CAPSLOCK  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE        &kp C_PP      &trans                                     &trans      &email                                  &kp HOME       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp END           &kp BACKSLASH       &kp F12
-&to 0         &move_window_left  &kp RC(LEFT)     &kp RC(RIGHT)     &trans                     &kp RC(BACKSPACE)     &trans  &trans      &something  &endEnter  &kp TAB                         &trans                &kp RC(DOWN)           &kp RC(UP_ARROW)  &move_window_right  &to 0
+&bootloader   &kp F1             &kp F2           &kp F3            &kp F4        &kp F5       &trans                                                           &trans           &kp F6         &kp F7                &kp F8                 &kp F9       &kp F10             &kp C_POWER
+&kp C_PREV    &kp AT             &kp LESS_THAN    &kp GREATER_THAN  &kp GRAVE     &kp TILDE    &kp C_BRIGHTNESS_INC                                             &kp C_REC        &kp CARET      &kp HASH              &kp ASTERISK           &kp DOLLAR   &kp PERCENT         &kp UNDERSCORE
+&kp C_NEXT    &kp EXCLAMATION    &kp MINUS        &kp PLUS          &kp KP_EQUAL  &key_repeat  &kp C_BRI_DEC         &trans  &trans      &trans      &trans     &lambda_capture  &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &kp PIPE            &kp F11
+&kp CAPSLOCK  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE        &kp C_PP      &trans                                     &trans      &email                                  &kp HOME       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp END      &kp BACKSLASH       &kp F12
+&to 0         &move_window_left  &kp RC(LEFT)     &kp RC(RIGHT)     &trans                     &kp RC(BACKSPACE)     &trans  &trans      &something  &endEnter  &kp TAB                         &trans                &spaced_cout           &spaced_cin  &move_window_right  &to 0
             >;
         };
 
