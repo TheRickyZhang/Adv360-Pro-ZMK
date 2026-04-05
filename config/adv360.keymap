@@ -400,11 +400,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&to 2      &kp N1       &kp N2    &kp N3     &kp N4                               &kp N5  &caps_word                                                           &tog 4     &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 3
-&kp EQUAL  &kp Q        &kp W     &kp F      &kp P                                &kp B   &alttab                                                              &kp GRAVE  &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
-&kp TAB    &kp A        &kp R     &kp S      &kp T                                &kp G   &super_i       &kp LGUI   &kp LALT      &kp PRINTSCREEN  &kp ESCAPE  &kp DEL    &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
-&sk LSHFT  &kp Z        &kp X     &kp C      &kp D                                &kp V                             &tog 3        &tmux_nav_mode                          &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &sk RSHFT
-&to 1      &key_repeat  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &tog 4        &copyall         &kp ENTER   &kp SPACE          &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &key_repeat    &to 5
+&to 2      &kp N1       &kp N2    &kp N3     &kp N4                               &kp N5  &caps_word                                                                  &tog 4     &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 3
+&kp EQUAL  &kp Q        &kp W     &kp F      &kp P                                &kp B   &alttab                                                                     &kp GRAVE  &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
+&kp TAB    &kp A        &kp R     &kp S      &kp T                                &kp G   &super_i       &kp LGUI   &kp LALT             &kp PRINTSCREEN  &kp ESCAPE  &kp DEL    &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
+&sk LSHFT  &kp Z        &kp X     &kp C      &kp D                                &kp V                             &kp PRINTSCREEN      &tmux_nav_mode                          &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &sk RSHFT
+&to 1      &key_repeat  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE  &kp LCTRL  &copyall             &copyall         &kp ENTER   &kp SPACE          &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &key_repeat    &to 5
             >;
         };
 
