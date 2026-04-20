@@ -398,7 +398,7 @@
         };
 
         layer-mouse {
-            bindings = <&mo 3>;
+            bindings = <&mo 4>;
             key-positions = <48 49>;
         };
 
