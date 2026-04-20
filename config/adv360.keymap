@@ -398,7 +398,7 @@
         };
 
         layer-mouse {
-            bindings = <&mo 4>;
+            bindings = <&mo 3>;
             key-positions = <48 49>;
         };
 
@@ -451,9 +451,9 @@
         mouse {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &trans          &trans          &mkp RCLK       &trans           &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &msc SCRL_DOWN  &mkp LCLK       &kp LA(LG(K))   &mkp MCLK        &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB5  &trans  &msc SCRL_LEFT  &kp LG(LA(H))   &kp LA(LG(J))   &kp LA(LG(L))    &msc SCRL_RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                    &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                        &trans  &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP    &mkp MCLK        &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MB5  &trans  &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                    &msc SCRL_UP    &trans          &trans          &trans           &trans           &trans
 &to 0   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &mkp MB4  &trans                  &trans          &trans          &trans           &trans           &to 0
             >;
         };
