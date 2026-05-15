@@ -255,7 +255,7 @@
         internship: internship {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(S) &kp U &kp M &kp I &kp T &kp O &kp M &kp O &kp SPACE &kp LS(M) &kp I &kp T &kp S &kp U &kp I &kp SPACE &kp LS(B) &kp A &kp N &kp K &kp I &kp N &kp G &kp SPACE &kp LS(C) &kp O &kp R &kp P &kp O &kp R &kp A &kp T &kp I &kp O &kp N>;
+            bindings = <&kp LS(S) &kp U &kp S &kp Q &kp U &kp E &kp H &kp A &kp N &kp N &kp A &kp SPACE &kp LS(I) &kp N &kp T &kp E &kp R &kp N &kp A &kp T &kp I &kp O &kp N &kp A &kp L &kp SPACE &kp LS(G) &kp R &kp O &kp U &kp P>;
             label = "INTERNSHIP";
         };
 
@@ -431,11 +431,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&to 2      &kp N1       &kp N2    &kp N3     &kp N4                               &kp N5  &rgb_ug RGB_TOG                                                                                         &tog 4     &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 3
-&kp EQUAL  &kp Q        &kp W     &kp F      &kp P                                &kp B   &caps_word                                                                                              &kp GRAVE  &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
-&kp TAB    &kp A        &kp R     &kp S      &kp T                                &kp G   &omarchy_alt_tab  &kp LGUI   &kp PRINTSCREEN      &kp K_SCROLL_UP    &kp ESCAPE                         &kp DEL    &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
-&sk LSHFT  &kp Z        &kp X     &kp C      &kp D                                &kp V                                &kp LALT             &tmux_nav_mode                                                   &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &sk RSHFT
-&to 1      &key_repeat  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE     &kp LCTRL  &copyall             &kp K_SCROLL_DOWN  &layer_tap_ctrl_enter RCTRL ENTER  &kp SPACE          &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &key_repeat    &to 5
+&to 2      &kp N1       &kp N2    &kp N3     &kp N4                               &kp N5  &rgb_ug RGB_TOG                                                                 &tog 4     &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 3
+&kp EQUAL  &kp Q        &kp W     &kp F      &kp P                                &kp B   &caps_word                                                                      &kp GRAVE  &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
+&kp TAB    &kp A        &kp R     &kp S      &kp T                                &kp G   &mkp MB4         &kp LGUI   &kp PRINTSCREEN      &kp K_SCROLL_UP    &kp ESCAPE  &kp DEL    &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
+&sk LSHFT  &kp Z        &kp X     &kp C      &kp D                                &kp V                               &kp LALT             &tmux_nav_mode                            &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &sk RSHFT
+&to 1      &key_repeat  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE    &kp LCTRL  &copyall             &kp K_SCROLL_DOWN  &kp ENTER   &kp SPACE          &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &key_repeat    &to 5
             >;
         };
 
@@ -443,7 +443,7 @@
             display-name = "Mod";
             bindings = <
 &bootloader   &kp F1             &kp F2           &kp F3            &kp F4        &kp F5       &trans                                                           &trans           &kp F6         &kp F7                &kp F8                 &kp F9       &kp F10             &kp C_POWER
-&kp C_PREV    &kp AT             &kp LESS_THAN    &kp GREATER_THAN  &kp GRAVE     &kp TILDE    &kp C_BRIGHTNESS_INC                                             &kp C_REC        &kp CARET      &kp HASH              &kp ASTERISK           &kp DOLLAR   &kp PERCENT         &kp UNDERSCORE
+&kp C_PREV    &kp AT             &kp LESS_THAN    &kp GREATER_THAN  &kp TILDE     &trans       &kp C_BRIGHTNESS_INC                                             &kp C_REC        &kp CARET      &kp HASH              &kp ASTERISK           &kp DOLLAR   &kp PERCENT         &kp UNDERSCORE
 &kp C_NEXT    &kp EXCLAMATION    &kp MINUS        &kp PLUS          &kp KP_EQUAL  &key_repeat  &kp C_BRI_DEC         &trans  &trans      &trans      &trans     &lambda_capture  &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &kp PIPE            &kp F11
 &kp CAPSLOCK  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE        &kp C_PP      &trans                                     &trans      &email                                  &kp HOME       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp END      &kp BACKSLASH       &kp F12
 &to 0         &move_window_left  &kp RC(LEFT)     &kp RC(RIGHT)     &trans                     &kp RC(BACKSPACE)     &trans  &trans      &something  &endEnter  &kp TAB                         &trans                &spaced_cout           &spaced_cin  &move_window_right  &to 0
