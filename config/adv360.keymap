@@ -384,11 +384,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &kp LSHIFT>,
+                <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp A &kp C>,
                 <&macro_release>,
-                <&kp LCTRL &kp LSHIFT>,
+                <&kp LCTRL>,
                 <&macro_press>;
 
             label = "COPY";
