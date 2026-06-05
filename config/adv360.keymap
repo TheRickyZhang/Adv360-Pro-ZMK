@@ -418,7 +418,7 @@
         };
 
         layer2 {
-            bindings = <&mo 2>;
+            bindings = <&mo 1>;
             key-positions = <46 59>;
         };
 
@@ -447,6 +447,16 @@
             bindings = <&alttab>;
             key-positions = <16 17>;
         };
+
+        win-left-workspace {
+            bindings = <&kp LS(LG(LEFT))>;
+            key-positions = <35 41>;
+        };
+
+        win_right_workspace {
+            bindings = <&kp LS(LG(RIGHT))>;
+            key-positions = <35 42>;
+        };
     };
 
     keymap {
@@ -455,22 +465,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&to 2      &kp N1       &kp N2    &kp N3     &kp N4                               &kp N5  &rgb_ug RGB_TOG                                                                    &tog 4     &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 3
+&to 1      &kp N1       &kp N2    &kp N3     &kp N4                               &kp N5  &rgb_ug RGB_TOG                                                                    &tog 4     &kp N6  &kp N7                                 &kp N8     &kp N9        &kp N0         &to 3
 &kp EQUAL  &kp Q        &kp W     &kp F      &kp P                                &kp B   &caps_word                                                                         &cpp_std   &kp J   &kp L                                  &kp U      &kp Y         &kp SEMICOLON  &kp MINUS
 &kp TAB    &kp A        &kp R     &kp S      &kp T                                &kp G   &kp LEFT_ALT     &kp LGUI   &kp PRINTSCREEN      &kp C_AC_SCROLL_UP    &kp ESCAPE  &kp DEL    &kp M   &kp N                                  &kp E      &kp I         &kp O          &quote_swap
 &sk LSHFT  &kp Z        &kp X     &kp C      &kp D                                &kp V                               &copy_all            &tmux_nav_mode                               &kp K   &kp H                                  &kp COMMA  &kp DOT       &kp FSLH       &sk RSHFT
-&to 1      &key_repeat  &kp LEFT  &kp RIGHT  &layertapLeftBracket 1 LEFT_BRACKET          &kp BACKSPACE    &kp LCTRL  &yank_all            &kp C_AC_SCROLL_DOWN  &kp ENTER   &kp SPACE          &layertapRightBracket 1 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &key_repeat    &to 5
-            >;
-        };
-
-        mod {
-            display-name = "Mod";
-            bindings = <
-&bootloader   &kp F1             &kp F2           &kp F3            &kp F4        &kp F5       &trans                                                           &trans           &kp F6         &kp F7                &kp F8                 &kp F9       &kp F10             &kp C_POWER
-&kp C_PREV    &kp AT             &kp LESS_THAN    &kp GREATER_THAN  &kp TILDE     &trans       &kp C_BRIGHTNESS_INC                                             &kp C_REC        &kp CARET      &kp HASH              &kp ASTERISK           &kp DOLLAR   &kp PERCENT         &kp UNDERSCORE
-&kp C_NEXT    &kp EXCLAMATION    &kp MINUS        &kp PLUS          &kp KP_EQUAL  &key_repeat  &kp C_BRI_DEC         &trans  &trans      &trans      &trans     &lambda_capture  &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &kp PIPE            &kp F11
-&kp CAPSLOCK  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE        &kp C_PP      &trans                                     &trans      &email                                  &kp HOME       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp END      &kp BACKSLASH       &kp F12
-&to 0         &move_window_left  &kp RC(LEFT)     &kp RC(RIGHT)     &trans                     &kp RC(BACKSPACE)     &trans  &trans      &something  &endEnter  &kp TAB                         &trans                &spaced_cout           &spaced_cin  &move_window_right  &to 0
+&to 2      &key_repeat  &kp LEFT  &kp RIGHT  &layertapLeftBracket 2 LEFT_BRACKET          &kp BACKSPACE    &kp LCTRL  &yank_all            &kp C_AC_SCROLL_DOWN  &kp ENTER   &kp SPACE          &layertapRightBracket 2 RIGHT_BRACKET  &kp DOWN   &kp UP_ARROW  &key_repeat    &to 5
             >;
         };
 
@@ -481,6 +480,17 @@
 &trans  &trans          &first_name   &start_date  &end_date      &github    &trans      &trans  &trans      &trans  &trans  &trans      &computerscience  &phone_number  &email     &internship  &trans  &trans
 &trans  &last_name      &full_name    &country     &trans         &trans                         &trans      &none                       &trans            &something     &email_uf  &trans       &trans  &trans
 &to 0   &trans          &trans        &trans       &trans                    &trans      &trans  &trans      &trans  &trans  &trans                        &trans         &trans     &trans       &trans  &to 0
+            >;
+        };
+
+        mod {
+            display-name = "Mod";
+            bindings = <
+&bootloader  &kp F1             &kp F2           &kp F3            &kp F4     &kp F5       &trans                                                           &trans           &kp F6         &kp F7                &kp F8                 &kp F9       &kp F10             &kp C_POWER
+&kp C_PREV   &kp AT             &kp LESS_THAN    &kp GREATER_THAN  &kp TILDE  &trans       &kp C_BRIGHTNESS_INC                                             &kp C_REC        &kp CARET      &kp HASH              &kp ASTERISK           &kp DOLLAR   &kp PERCENT         &kp UNDERSCORE
+&kp C_NEXT   &kp EXCLAMATION    &kp MINUS        &kp PLUS          &kp EQUAL  &key_repeat  &kp C_BRI_DEC         &trans  &trans      &trans      &trans     &lambda_capture  &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &kp PIPE            &kp F11
+&trans       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE        &kp C_PP   &trans                                     &trans      &email                                  &kp HOME       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp END      &kp BACKSLASH       &kp F12
+&to 0        &move_window_left  &kp RC(LEFT)     &kp RC(RIGHT)     &trans                  &kp RC(BACKSPACE)     &trans  &trans      &something  &endEnter  &kp TAB                         &trans                &spaced_cout           &spaced_cin  &move_window_right  &to 0
             >;
         };
 
