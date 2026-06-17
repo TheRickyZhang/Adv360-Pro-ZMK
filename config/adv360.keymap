@@ -453,7 +453,7 @@
 
         layer-mouse {
             bindings = <&mo 3>;
-            key-positions = <16 18>;
+            key-positions = <48 50>;
         };
 
         quick-tab-switch {
@@ -474,6 +474,11 @@
         win_right_workspace {
             bindings = <&kp LG(LC(RIGHT))>;
             key-positions = <35 42>;
+        };
+
+        vscode {
+            bindings = <&kp F5>;
+            key-positions = <18 16>;
         };
     };
 
