@@ -425,6 +425,13 @@
 
             label = "PASTE";
         };
+
+        sig_apxdevbal: sig_apxdevbal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp H &kp A &kp N &kp G &kp R &kp I &kp AT &kp A &kp P &kp X &kp D &kp E &kp V &kp B &kp A &kp L &kp N9 &kp N3 &kp N4 &kp N0>;
+            label = "SIG_APXDEVBAL";
+        };
     };
 
     combos {
@@ -500,7 +507,7 @@
             bindings = <
 &trans  &bt BT_SEL 0    &bt BT_SEL 1  &trans       &trans         &trans     &bt BT_CLR                                      &bt BT_NXT  &trans            &trans         &trans     &trans       &trans  &trans
 &trans  &neovim_config  &website      &university  &phone_number  &birthday  &trans                                          &trans      &trans            &linkedin      &username  &trans       &trans  &trans
-&trans  &trans          &first_name   &start_date  &end_date      &github    &trans      &trans  &trans      &trans  &trans  &trans      &computerscience  &phone_number  &email     &internship  &trans  &trans
+&trans  &sig_apxdevbal  &first_name   &start_date  &end_date      &github    &trans      &trans  &trans      &trans  &trans  &trans      &computerscience  &phone_number  &email     &internship  &trans  &trans
 &trans  &last_name      &full_name    &country     &trans         &trans                         &trans      &none                       &trans            &something     &email_uf  &trans       &trans  &trans
 &to 0   &trans          &trans        &trans       &trans                    &trans      &trans  &trans      &trans  &trans  &trans                        &trans         &trans     &trans       &trans  &to 0
             >;
