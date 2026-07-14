@@ -497,7 +497,7 @@
             bindings = <
 &to 1      &kp N1       &kp N2    &kp N3     &kp N4                               &kp N5  &rgb_ug RGB_TOG                                                             &tog 4     &kp N6  &kp N7                                 &kp N8      &kp N9        &kp N0         &to 3
 &kp EQUAL  &kp Q        &kp W     &kp F      &kp P                                &kp B   &caps_word                                                                  &cpp_std   &kp J   &kp L                                  &kp U       &kp Y         &kp SEMICOLON  &kp MINUS
-&kp TAB    &kp A        &kp R     &kp S      &kp T                                &kp G   &kp LEFT_ALT     &kp LGUI   &kp PRINTSCREEN      &kp LC(LG(D))   &ctrlc     &kp DEL    &kp M   &n_morphed                             &e_morphed  &kp I         &kp O          &quote_swap
+&kp TAB    &kp A        &kp R     &kp S      &kp T                                &kp G   &kp LEFT_ALT     &kp LGUI   &kp PRINTSCREEN      &kp LC(LG(D))   &kp ESC    &kp DEL    &kp M   &n_morphed                             &e_morphed  &kp I         &kp O          &quote_swap
 &sk LSHFT  &kp Z        &kp X     &kp C      &kp D                                &kp V                               &copy_all            &tmux_nav_mode                        &kp K   &kp H                                  &kp COMMA   &kp DOT       &kp FSLH       &sk RSHFT
 &to 2      &key_repeat  &kp LEFT  &kp RIGHT  &layertapLeftBracket 2 LEFT_BRACKET          &kp BACKSPACE    &kp LCTRL  &yank_all            &kp LC(LG(F4))  &kp ENTER  &kp SPACE          &layertapRightBracket 2 RIGHT_BRACKET  &kp DOWN    &kp UP_ARROW  &key_repeat    &to 5
             >;
