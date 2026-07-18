@@ -55,7 +55,7 @@
         n_morphed: n_morphed {
             compatible = "zmk,behavior-mod-morph";
             label = "N_MORPHED";
-            bindings = <&kp N>, <&kp LG(LC(LEFT))>;
+            bindings = <&kp N>, <&tmux_left>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
@@ -64,7 +64,7 @@
         e_morphed: e_morphed {
             compatible = "zmk,behavior-mod-morph";
             label = "E_MORPHED";
-            bindings = <&kp E>, <&kp LG(LC(RIGHT))>;
+            bindings = <&kp E>, <&tmux_right>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
@@ -431,6 +431,30 @@
             #binding-cells = <0>;
             bindings = <&kp Z &kp H &kp A &kp N &kp G &kp R &kp I &kp AT &kp A &kp P &kp X &kp D &kp E &kp V &kp B &kp A &kp L &kp N9 &kp N3 &kp N4 &kp N0>;
             label = "SIG_APXDEVBAL";
+        };
+
+        tmux_left: tmux_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LCTRL>,
+                <&macro_release>,
+                <&kp SPACE &kp LEFT>;
+
+            label = "TMUX_LEFT";
+        };
+
+        tmux_right: tmux_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LCTRL>,
+                <&macro_release>,
+                <&kp SPACE &kp RIGHT>;
+
+            label = "TMUX_RIGHT";
         };
     };
 
