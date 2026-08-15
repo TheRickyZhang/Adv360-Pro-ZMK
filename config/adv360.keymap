@@ -69,6 +69,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
+
+        vim_ctrl_w: vim_ctrl_w {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VIM_CTRL_W";
+            bindings = <&kp W>, <&kp LC(BACKSPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
 
     macros {
@@ -529,11 +538,11 @@
 
         esc_to_ctrlc {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &ctrlc  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans       &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &vim_ctrl_w  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans      &trans  &ctrlc  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans       &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans       &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
